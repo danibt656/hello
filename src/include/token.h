@@ -11,7 +11,6 @@ typedef struct TOKEN_STRUCT
         TOKEN_LPAREN,
         TOKEN_RPAREN
     }type;
-
     char* value;
 } token_T;
 

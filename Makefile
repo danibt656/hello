@@ -18,4 +18,3 @@ clean:
 	-rm *.out
 	-rm *.o
 	-rm src/*.o
-	-sudo rm -f /usr/local/bin/hello
