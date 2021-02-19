@@ -17,7 +17,6 @@ int main(int argc, char* argv[])
         printf("TOKEN(%d, %s)\n", token->type, token->value);
         token_free(token);
     }
-    token_free(token);
     
     lexer_free(lexer);
 
