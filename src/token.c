@@ -1,4 +1,7 @@
 #include "include/token.h"
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
 
 token_T* init_token(int type, char* value)
 {
@@ -7,4 +10,9 @@ token_T* init_token(int type, char* value)
     token->value = value;
 
     return token;
+}
+
+void token_free(token_T* token)
+{
+    free(token);
 }

@@ -1,7 +1,7 @@
 exec = hello.out
 sources = $(wildcard src/*.c)
 objects = $(sources:.c=.o)
-flags = -g
+flags = -g -Wall
 
 
 $(exec): $(objects)
@@ -10,11 +10,11 @@ $(exec): $(objects)
 %.o: %.c include/%.h
 	gcc -c $(flags) $< -o $@
 
-install:
-	make
-	cp ./hello.out /usr/local/bin/hello
+#install:
+#	make
+#	cp ./hello.out /usr/local/bin/hello
 
 clean:
-	-rm *.out
-	-rm *.o
-	-rm src/*.o
+	rm $(exec)
+	rm *.o
+	cd src; rm *.o
